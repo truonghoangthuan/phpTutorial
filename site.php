@@ -144,9 +144,47 @@
         echo $sum;
     ?>
 
-    <!-- If Statements -->
-    <h1>If Statements</h1>
+    <!-- If Statement -->
+    <h1>If Statement</h1>
     
+    <?php
+        $isMale = false;
+        $isTall = false;
+
+        if ($isMale && $isTall) {
+            echo "You are tall male";
+        } elseif ($isMale && !$isTall) {
+            echo "You are not tall male";
+        } elseif (!$isMale && $isTall) {
+            echo "You are tall but not male";
+        } else {
+            echo "You are not male and not tall";
+        }
+    ?>
+
+    <!-- Switch Statement -->
+    <h1>Switch Statement</h1>
+    <form action="site.php" method="post">
+        Insert grade: <input type="text" name="grade" id="">
+        <input type="submit">
+    </form>
+    <?php
+        $grade = $_POST["grade"];
+        switch ($grade) {
+            case 'A':
+                echo "You are good!";
+                break;
+            case 'B+':
+                echo "You are pretty good!";
+                break;
+            case 'F':
+                echo "You fail!";
+                break;
+            default:
+                echo "Wrong grade!";
+                break;
+        }
+    ?>
 
 </body>
 </html>
