@@ -186,5 +186,18 @@
         }
     ?>
 
+    <!-- While Loops -->
+    <h1>While Loops</h1>
+    <?php
+        $index = 1;
+        while ($index <= 5) {
+            echo "$index <br>";
+            $index++;
+        }
+    ?>
+
+    <!-- For Loops -->
+    <h1>For Loops</h1>
+
 </body>
 </html>
