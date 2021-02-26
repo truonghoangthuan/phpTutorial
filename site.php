@@ -198,6 +198,52 @@
 
     <!-- For Loops -->
     <h1>For Loops</h1>
+    <?php
+        for ($i=1; $i < 6; $i++) { 
+            echo "$i <br>";
+        }
+    ?>
+
+    <!-- Including HTML -->
+    <h1>Including HTML</h1>
+    <?php include "header.html" ?>
+
+    <!-- Classes & Objects -->
+    <h1>Classes & Objects</h1>
+    <?php
+        class Book {
+            var $title;
+            var $author;
+            var $pages;
+        }
+
+        $harryPotter = new Book;
+        $harryPotter->title = "Harry Potter";
+        $harryPotter->author = "JK Rowling";
+        $harryPotter->pages = "4000";
+
+        echo $harryPotter->title;
+    ?>
+
+    <!-- Constructors -->
+    <h1>Constructors</h1>
+    <?php
+        class Book2 {
+            var $title2;
+            var $author2;
+            var $pages2;
+
+            function __construct($aTitle, $aAuthor, $aPages) {
+                $this->title2 = $aTitle;
+                $this->author2 = $aAuthor;
+                $this->pages2 = $aPages;
+            }
+        }
+
+        $harryPotter = new Book2("Harry Potter", "JK Rowling", "4000");
+
+        echo $harryPotter->title2;
+    ?>
 
 </body>
 </html>
